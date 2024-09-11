@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de RPG</title>
+</head>
+<body>
+<h1>Crie sua ficha!</h1>
+
+<form id="personagemForm">
+  <div class="inputFormulário">
+    <label for="nomePersonagem">Personagem:</label>
+    <input type="text" placeholder="Insira o nome do seu personagem..." id="nomePersonagem" required>
+
+    <label for="nomeJogador">Nome:</label>
+    <input type="text" placeholder="Insira o seu nome..." id="nomeJogador" required>
+
+    <label for="autocompleteRaca">Raça:</label>
+    <select required id="autocompleteRaca">
+      <option value="" disabled selected hidden>Clique para escolher a raça:</option>
+    </select>
+
+    <label for="autocompleteClasse">Classe:</label>
+    <select required id="autocompleteClasse">
+      <option value="" disabled selected hidden>Clique para escolher a classe:</option>               
+    </select>
+
+    <label for="autocompletePv">PV:</label>
+    <input type="text" placeholder="Pontos de Vida" id="autocompletePv" readonly>
+
+    <label for="autocompleteAlinhamento">Alinhamento:</label>
+    <select required id="autocompleteAlinhamento">
+      <option value="" disabled selected hidden>Clique para escolher o Alinhamento:</option>
+    </select>
+  </div>
+
+  <div id="tabelaAtributos">
+    <h3>Escolha o tipo de pontos de atributos</h3>
+    <button id="atributoPadrao">Pontos padrão</button>
+    <button id="atributoPersonalizado">Pontos personalizado</button>
+  </div>
+
+  <div>
+    <button id="gerarClasse" type="submit">Gerar</button>
+  </div>
+</form>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
